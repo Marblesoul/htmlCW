@@ -50,7 +50,7 @@
     z-index: 2;
 
     &-logo {
-      max-width: 179px;
+      width: 179px;
 
       img {
         width: 100%;
@@ -165,24 +165,6 @@
       }
     }
 
-    &-category {
-      display: flex;
-      gap: 20px;
-      font-size: 14px;
-      font-weight: bold;
-      text-transform: uppercase;
-      margin-bottom: 13px;
-
-      a {
-        text-decoration: none;
-        color: #b59f5b;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-
     &-title {
       font-size: 20px;
       font-weight: bold;
@@ -205,6 +187,23 @@
   }
 }
 
+.category-tags {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+
+  &__item {
+    text-decoration: none;
+    color: #b59f5b;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
 
 
 
@@ -212,6 +211,97 @@
 
 
 
+.shop {
+
+  &__container {
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    gap: 66px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    position: relative;
+
+    &::after {
+      --dif-width: -22px;
+      content: "";
+      position: absolute;
+      display: block;
+      bottom: var(--dif-width);
+      left: 0;
+      transform: translate(var(--dif-width));
+      border: 3px solid #b59f5b;
+      width: calc(100% - var(--dif-width) * 2);
+      height: 266px;
+    }
+
+    &-img {
+      min-width: 300px;
+      margin-bottom: 25px;
+    }
+
+    &-title {
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    &-desc {
+      margin-bottom: 20px;
+      font-size: 15px;
+      line-height: 22px;
+
+      a {
+        text-decoration: none;
+        color: #b59f5b;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &-prices {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-price {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 24px;
+    }
+
+    &-old-price {
+      font-size: 14px;
+      text-decoration: line-through;
+    }
+
+    &-bottom-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    &-button {
+      color: #ffffff;
+      padding: 20px 30px;
+      background-color: #b59f5b;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: none;
+    }
+  }
+}
 
 .footer {
 

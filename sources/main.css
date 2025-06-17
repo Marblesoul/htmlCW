@@ -49,7 +49,7 @@
   z-index: 2;
 }
 .header__nav-logo {
-  max-width: 179px;
+  width: 179px;
 }
 .header__nav-logo img {
   width: 100%;
@@ -147,21 +147,6 @@
 .trends__item-img--4 {
   background-image: url(./img/trend4.jpg);
 }
-.trends__item-category {
-  display: flex;
-  gap: 20px;
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 13px;
-}
-.trends__item-category a {
-  text-decoration: none;
-  color: #b59f5b;
-}
-.trends__item-category a:hover {
-  text-decoration: underline;
-}
 .trends__item-title {
   font-size: 20px;
   font-weight: bold;
@@ -177,6 +162,99 @@
   border: 3px solid #b59f5b;
   padding: 40px 32px;
   align-self: end;
+}
+
+.category-tags {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+}
+.category-tags__item {
+  text-decoration: none;
+  color: #b59f5b;
+}
+.category-tags__item:hover {
+  text-decoration: underline;
+}
+
+.shop__container {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  gap: 66px;
+}
+.shop__item {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  position: relative;
+}
+.shop__item::after {
+  --dif-width: -22px;
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: var(--dif-width);
+  left: 0;
+  transform: translate(var(--dif-width));
+  border: 3px solid #b59f5b;
+  width: calc(100% - var(--dif-width) * 2);
+  height: 266px;
+}
+.shop__item-img {
+  min-width: 300px;
+  margin-bottom: 25px;
+}
+.shop__item-title {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.shop__item-desc {
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 22px;
+}
+.shop__item-desc a {
+  text-decoration: none;
+  color: #b59f5b;
+  cursor: pointer;
+}
+.shop__item-desc a:hover {
+  text-decoration: underline;
+}
+.shop__item-prices {
+  display: flex;
+  flex-direction: column;
+}
+.shop__item-price {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 24px;
+}
+.shop__item-old-price {
+  font-size: 14px;
+  text-decoration: line-through;
+}
+.shop__item-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.shop__item-button {
+  color: #ffffff;
+  padding: 20px 30px;
+  background-color: #b59f5b;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
 }
 
 .footer__social {
